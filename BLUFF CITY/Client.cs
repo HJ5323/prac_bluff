@@ -43,26 +43,6 @@ namespace BLUFF_CITY
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
-
-        public static void JoinGame(string id, string nickname, string gameRoom)
-        {
-            try
-            {
-                if (client == null || !client.Connected)
-                {
-                    ConnectToServer();
-                }
-
-                string message = $"join:{id}:{nickname}:{gameRoom}";
-                byte[] data = Encoding.ASCII.GetBytes(message);
-                stream.Write(data, 0, data.Length);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message}");
-            }
-        }
-
             public static void SendMessage(string gameRoom, string message)
         {
             try
