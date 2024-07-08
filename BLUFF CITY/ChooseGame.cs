@@ -43,7 +43,6 @@ namespace BLUFF_CITY
 
         private void MAFIA_GAME_Click(object sender, EventArgs e)
         {
-            Client.JoinGame(playerID, playerNickname, "mafia_game");
             mafia mafiaForm = new mafia(playerID, playerNickname);
             mafiaForm.Show();
 
